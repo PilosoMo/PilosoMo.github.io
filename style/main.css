@@ -1,0 +1,169 @@
+/* main.css */
+
+/* Reset & base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0f111a;
+  color: #e0e6f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  color: #918625;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #34c48d;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Header */
+header {
+  margin-top: 3rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.25rem;
+  color: #9bb0d3;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* CTA Button */
+.btn-primary {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #cc4634;
+  color: #0f111a;
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(158, 71, 44, 0.4);
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #34c48d;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: #171b2d;
+  border-radius: 12px;
+  padding: 1.8rem;
+  flex: 1 1 250px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+}
+
+.feature h3 {
+  color: #e4532e;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: #bbc5e1;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #141822;
+  font-size: 0.9rem;
+  color: #6b7a9c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  .features {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+
+/* Contact form styles from inline */
+#contact h2 {
+  margin-bottom: 1rem;
+  color: #e4532e;
+}
+
+#contact p {
+  color: #bbc5e1;
+  margin-bottom: 2rem;
+}
+
+#contact form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+  background: #22263a;
+  color: #e0e6f0;
+}
+
+#contact textarea {
+  margin-bottom: 1.5rem;
+}
+
+#contact button.btn-primary {
+  width: 100%;
+}

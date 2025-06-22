@@ -2,14 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Odryss</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odryss — Innovate the Future</title>
+  <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to Odryss</h1>
-    <p>Your startup intro goes here.</p>
+
+  <header class="container" role="banner">
+    <h1>Odryss</h1>
+    <p>Innovating the future of technology and engineering. Building smart solutions that empower startups to thrive in a connected world.</p>
+    <button class="btn-primary" onclick="alert('Thanks for your interest!')">Get in Touch</button>
   </header>
+
+  <section class="container features" aria-label="Key features">
+    <article class="feature">
+      <h3>Cutting-Edge Tech</h3>
+      <p>Leveraging the latest advances in AI, IoT, and cloud computing to build scalable, efficient systems.</p>
+    </article>
+    <article class="feature">
+      <h3>Engineering Excellence</h3>
+      <p>Precision-driven processes and rigorous quality standards ensure our products exceed expectations.</p>
+    </article>
+    <article class="feature">
+      <h3>Startup Focus</h3>
+      <p>Tailored solutions designed to help startups launch faster, scale smarter, and succeed globally.</p>
+    </article>
+  </section>
+
+<section class="container" id="contact" aria-label="Contact Us">
+    <h2>Contact Us</h2>
+    <p> Have questions or want to collaborate? Fill out the form below and we'll get back to you soon.</p>
+    <form>
+        <label for="name" style="display:block; margin-bottom:0.5rem;">Name</label>
+        <input type="text" id="name" name="name" required style="width:100%; padding:0.6rem; border-radius:6px; border:none; margin-bottom:1rem; background:#22263a; color:#e0e6f0;">
+        
+        <label for="email" style="display:block; margin-bottom:0.5rem;">Email</label>
+        <input type="email" id="email" name="email" required style="width:100%; padding:0.6rem; border-radius:6px; border:none; margin-bottom:1rem; background:#22263a; color:#e0e6f0;">
+        
+        <label for="message" style="display:block; margin-bottom:0.5rem;">Message</label>
+        <textarea id="message" name="message" rows="4" required style="width:100%; padding:0.6rem; border-radius:6px; border:none; margin-bottom:1.5rem; background:#22263a; color:#e0e6f0;"></textarea>
+        
+        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+    </form>
+</section>
+
+  <footer role="contentinfo">
+    &copy; 2025 Odryss. All rights reserved.
+  </footer>
+
 </body>
 </html>
