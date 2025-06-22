@@ -6,21 +6,21 @@ Built with HTML, CSS, and JavaScript, and hosted using GitHub Pages.
 ---
 
 ## 📁 Folder Structure
-odryss-site/
-├── index.html
-├── about.html
-├── contact.html
-├── style/
-│ └── main.css
-├── scripts/
-│ └── main.js
-├── assets/
-│ ├── images/
-│ │ └── logo.png
-│ ├── fonts/
-│ └── icons/
-├── CNAME
-└── README.md
+odryss-site/  
+├── index.html  
+├── about.html  
+├── contact.html  
+├── style/  
+│ └── main.css  
+├── scripts/  
+│ └── main.js  
+├── assets/  
+│ ├── images/  
+│ │ └── logo.png  
+│ ├── fonts/  
+│ └── icons/  
+├── CNAME  
+└── README.md  
 
 ---
 
