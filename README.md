@@ -6,21 +6,36 @@ Built with HTML, CSS, and JavaScript, and hosted using GitHub Pages.
 ---
 
 ## 📁 Folder Structure
-odryss-site/  
-├── index.html # Homepage  
-├── about.html # (Optional) About page  
-├── contact.html # (Optional) Contact page  
-├── style/  
-│ └── main.css # Main stylesheet  
-├── scripts/  
-│ └── main.js # Custom JavaScript  
-├── assets/  
-│ ├── images/  
-│ │ └── logo.png # Logos, illustrations, etc.  
-│ ├── fonts/ # (Optional) Web fonts  
-│ └── icons/ # (Optional) Favicons or SVGs  
-├── CNAME # Used for GitHub Pages custom domain  
-└── README.md # This file  
+odryss-site/
+├── index.html
+├── about.html
+├── contact.html
+├── style/
+│ └── main.css
+├── scripts/
+│ └── main.js
+├── assets/
+│ ├── images/
+│ │ └── logo.png
+│ ├── fonts/
+│ └── icons/
+├── CNAME
+└── README.md
+
+---
+
+## 📄 Description
+
+- **index.html**: Homepage  
+- **about.html**: (Optional) About page  
+- **contact.html**: (Optional) Contact page  
+- **style/main.css**: Main stylesheet  
+- **scripts/main.js**: Custom JavaScript  
+- **assets/images/logo.png**: Logos, illustrations, etc.  
+- **assets/fonts/**: (Optional) Web fonts  
+- **assets/icons/**: (Optional) Favicons or SVGs  
+- **CNAME**: Used for GitHub Pages custom domain  
+- **README.md**: This file  
 
 ---
 
