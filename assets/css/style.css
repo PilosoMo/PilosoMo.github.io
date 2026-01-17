@@ -287,18 +287,6 @@ html {
     border-color: var(--primary);
 }
 
-.member-image {
-    width: 100%;
-    height: 300px;
-    background: var(--accent); /* Placeholder color if image is missing */
-}
-
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures headshots aren't squished */
-}
-
 .member-info {
     padding: 1.5rem;
 }
@@ -311,4 +299,20 @@ html {
 .member-info p {
     font-size: 0.95rem;
     opacity: 0.8;
+}
+
+.member-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* This forces the box to be a perfect square */
+    overflow: hidden;
+    background: var(--accent);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    /* Change 'cover' to 'fill' or 'contain' */
+    object-fit: contain; 
+    /* Ensures no background color peeks through if the math is off by 1px */
+    background-color: var(--card-bg); 
 }
