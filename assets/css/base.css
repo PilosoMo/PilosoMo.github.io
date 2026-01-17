@@ -1,0 +1,84 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+/* THEME VARIABLES */
+:root {
+    /* Light Theme (Default) */
+    --bg-color: #ffffff;
+    --text-color: #2b2d42;
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --hero-bg: radial-gradient(circle at top right, #f8f9fa, #e9ecef);
+    --border-color: #eeeeee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    /* Brand Colors (Fixed) */
+    --primary: #e63946;    /* Fire Red */
+    --dark-blue: #1d3557;  /* Tech Blue */
+    --accent: #457b9d;     
+    --transition: all 0.3s ease;
+}
+
+/* Dark Theme Overrides */
+.dark-theme {
+    --bg-color: #0f172a;   /* Deep Slate */
+    --text-color: #f1faee; /* Off-white */
+    --nav-bg: #1e293b;
+    --card-bg: #1e293b;
+    --hero-bg: radial-gradient(circle at top right, #1e293b, #0f172a);
+    --border-color: #334155;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--primary);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* Theme Toggle Button Style */
+#theme-toggle {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    border-color: var(--primary);
+}
+
+/* 8. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav { padding: 1rem 5%; }
+    .hero { text-align: center; justify-content: center; }
+    .hero h1 { font-size: 2.5rem; }
+    nav ul { display: none; } /* Add a mobile menu later */
+}
+
+html {
+    scroll-behavior: smooth;
+}

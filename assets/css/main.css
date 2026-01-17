@@ -1,0 +1,12 @@
+/* assets/css/main.css */
+
+/* 1. Base foundations (Fonts, Variables, Resets) */
+@import url('base.css');
+
+/* 2. Global layout (Nav, Footer) */
+@import url('layout.css');
+
+/* 3. Page-specific styles */
+@import url('home_page.css');
+@import url('team_page.css');
+@import url('contact_page.css');

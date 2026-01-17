@@ -1,0 +1,63 @@
+/* --- Team Page Layout --- */
+.team-page {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+/* --- Team Card Design --- */
+.team-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden; /* Clips the image to the border radius */
+    transition: var(--transition);
+    box-shadow: var(--card-shadow);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.member-info p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.member-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* This forces the box to be a perfect square */
+    overflow: hidden;
+    background: var(--accent);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    /* Change 'cover' to 'fill' or 'contain' */
+    object-fit: contain; 
+    /* Ensures no background color peeks through if the math is off by 1px */
+    background-color: var(--card-bg); 
+}
