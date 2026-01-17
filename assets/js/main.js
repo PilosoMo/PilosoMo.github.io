@@ -27,3 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
     });
 });
+
+const contactForm = document.getElementById('main-contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Stop page from refreshing
+        
+        // In a real app, you would send this data to a server here
+        const btn = contactForm.querySelector('button');
+        const originalText = btn.textContent;
+        
+        btn.textContent = "Sending...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            alert("Message sent successfully! We'll get back to you soon.");
+            btn.textContent = originalText;
+            btn.disabled = false;
+            contactForm.reset();
+        }, 1500);
+    });
+}

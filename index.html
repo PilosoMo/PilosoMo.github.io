@@ -12,12 +12,12 @@
 </head>
 <body>
     <nav>
-        <div class="logo">FIRESHIELD</div>
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">FIRESHIELD</a></div>
         <ul>
             <li><a href="#">Product</a></li>
             <li><a href="#">Mission</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#" class="btn-nav">Contact</a></li>
+            <li><a href="team.html">Meet The Team</a></li>
+            <li><a href="#contact" class="btn-nav">Contact Us</a></li>
             <li><button id="theme-toggle">🌙</button></li>
         </ul>
         
@@ -45,6 +45,32 @@
         <div class="card">
             <h3>Cloud Telemetry</h3>
             <p>Monitor system health and inference speeds through a custom MQTT dashboard.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container"></div>
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Have questions about FireShield's hardware integration or custom software? Drop us a message.</p>
+                <ul class="contact-details">
+                    <li><strong>Email:</strong> support@fireshield.tech</li>
+                    <li><strong>Location:</strong> San Francisco, CA</li>
+                </ul>
+            </div>
+            
+            <form class="contact-form" id="main-contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
         </div>
     </section>
 
