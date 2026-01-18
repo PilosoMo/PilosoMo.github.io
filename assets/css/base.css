@@ -10,24 +10,21 @@
 :root {
     /* Light Theme (Default) */
     --bg-color: #ffffff;
-    --text-color: #2b2d42;
+    --primary: #1f366c;
+    --secondary: #ffffff;
     --nav-bg: #ffffff;
     --card-bg: #ffffff;
     --hero-bg: radial-gradient(circle at top right, #f8f9fa, #e9ecef);
     --border-color: #eeeeee;
     --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
-
-    /* Brand Colors (Fixed) */
-    --primary: #e63946;    /* Fire Red */
-    --dark-blue: #1d3557;  /* Tech Blue */
-    --accent: #457b9d;     
     --transition: all 0.3s ease;
 }
 
 /* Dark Theme Overrides */
 .dark-theme {
     --bg-color: #0f172a;   /* Deep Slate */
-    --text-color: #f1faee; /* Off-white */
+    --primary: #ffffff;
+    --secondary: #1f366c;
     --nav-bg: #1e293b;
     --card-bg: #1e293b;
     --hero-bg: radial-gradient(circle at top right, #1e293b, #0f172a);
