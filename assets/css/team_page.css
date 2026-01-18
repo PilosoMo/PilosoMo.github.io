@@ -17,16 +17,26 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Increased the minimum width slightly for better clarity */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
     margin-top: 4rem;
+    /* Centering and capping the grid prevents cards from stretching on zoom-out */
+    max-width: 1100px; 
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; 
 }
 
 /* --- Team Card Design --- */
 .team-card {
-    background: transparent; /* Container is now transparent */
-    perspective: 1000px; /* Essential for 3D effect */
-    height: 450px; /* Ensure fixed height for the flip */
+    background: transparent;
+    perspective: 1000px;
+    height: auto; 
+    /* Capping the card width ensures the image doesn't blow up on wide screens */
+    max-width: 350px; 
+    width: 100%;
+    margin: 0 auto; /* Centers the card within its grid cell */
     border: none;
     box-shadow: none;
 }
@@ -34,8 +44,6 @@
 .card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -46,11 +54,9 @@
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
-    position: absolute;
+.card-front {
+    position: relative; /* Changed from absolute */
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     border-radius: 15px;
     border: 1px solid var(--border-color);
@@ -58,15 +64,27 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    z-index: 2;
 }
 
 /* Style for the back of the card */
 .card-back {
+    position: absolute; /* Keeps it behind the front */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     transform: rotateY(180deg);
-    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    background: var(--hero-bg);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--hero-bg); /* Use a slightly different background */
+    padding: 2rem;
+    text-align: center;
 }
 
 .card-back h3 {
@@ -102,15 +120,17 @@
     transform: translateY(-2px);
 }
 
-/* Maintain original image sizing */
-.card-front .member-image {
-    flex: 1;
+/* --- Image Handling --- */
+.member-image {
     width: 100%;
-    overflow: hidden;
+    aspect-ratio: auto; /* Remove the 1/1 square restriction */
+    background: none;
+    line-height: 0; /* Prevents tiny gaps at the bottom of the image */
 }
 
-.card-front .member-image img {
+.member-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Allow the image to maintain its natural proportions */
+    display: block;
+    object-fit: contain; /* Ensures the whole image is visible */
 }
