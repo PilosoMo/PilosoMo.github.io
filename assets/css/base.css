@@ -1,3 +1,8 @@
+/*
+    base.css
+    Core styles and theme variables for light and dark modes.
+*/
+
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
@@ -35,40 +40,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* LOGO */
-.logo {
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--primary);
-    letter-spacing: -1px;
-    text-transform: uppercase;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: var(--transition);
-}
-
-/* Theme Toggle Button Style */
-#theme-toggle {
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-#theme-toggle:hover {
-    border-color: var(--primary);
 }
 
 /* 8. RESPONSIVE DESIGN */

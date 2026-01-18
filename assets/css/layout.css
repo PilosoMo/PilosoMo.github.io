@@ -1,3 +1,8 @@
+/*
+    layout.css
+    Global layout styles: Navigation bar, buttons, and other common components.
+*/
+
 /* NAVIGATION */
 nav {
     display: flex;
@@ -31,6 +36,23 @@ nav ul a:hover {
     color: var(--primary);
 }
 
+/* LOGO */
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--primary);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
 /* BUTTONS */
 .btn-primary {
     padding: 0.8rem 2rem;
@@ -50,29 +72,19 @@ nav ul a:hover {
     filter: brightness(1.1);
 }
 
-/* FEATURE CARDS */
-.features {
-    padding: 5rem 10%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    padding: 2rem;
-    background: var(--card-bg);
+/* Theme Toggle Button Style */
+#theme-toggle {
+    background: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
+    color: var(--text-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: var(--transition);
 }
 
-.card:hover {
-    transform: translateY(-5px);
+#theme-toggle:hover {
     border-color: var(--primary);
-}
-
-.card h3 {
-    margin-bottom: 0.8rem;
-    color: var(--primary);
 }
