@@ -60,7 +60,7 @@
     backface-visibility: hidden;
     border-radius: 15px;
     border: 1px solid var(--border-color);
-    background: var(--hero-bg);
+    background: var(--team-front);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -78,7 +78,7 @@
     transform: rotateY(180deg);
     border-radius: 15px;
     border: 1px solid var(--border-color);
-    background: var(--hero-bg);
+    background: var(--team-back);
     display: flex;
     flex-direction: column;
     justify-content: center;
