@@ -1,20 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check for saved theme in Local Storage
+    if (!themeToggle) return; // Safety check
+
     const currentTheme = localStorage.getItem('theme');
-    
     if (currentTheme === 'dark') {
         body.classList.add('dark-theme');
         themeToggle.textContent = '☀️';
     }
 
     themeToggle.addEventListener('click', () => {
-        // Toggle the class
         body.classList.toggle('dark-theme');
-        
-        // Check if dark mode is now active
         let theme = 'light';
         if (body.classList.contains('dark-theme')) {
             theme = 'dark';
@@ -22,31 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             themeToggle.textContent = '🌙';
         }
-        
-        // Save the choice
         localStorage.setItem('theme', theme);
-    });
-});
-
-const contactForm = document.getElementById('main-contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Stop page from refreshing
-        
-        // In a real app, you would send this data to a server here
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.textContent;
-        
-        btn.textContent = "Sending...";
-        btn.disabled = true;
-
-        setTimeout(() => {
-            alert("Message sent successfully! We'll get back to you soon.");
-            btn.textContent = originalText;
-            btn.disabled = false;
-            contactForm.reset();
-        }, 1500);
     });
 }
 
@@ -67,25 +40,26 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY;
 });
 
-function loadFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
-}
-
-// Call the function when the page loads
-window.onload = loadFooter;
-
-
-function loadNav() {
+// Single function to load all shared components
+function loadComponents() {
+    // 1. Load Navigation
     fetch('nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
-        });
+            // IMPORTANT: Initialize theme toggle ONLY after nav is in the DOM
+            initThemeToggle();
+        })
+        .catch(err => console.error("Error loading navigation:", err));
+
+    // 2. Load Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(err => console.error("Error loading footer:", err));
 }
 
-// Call the function when the page loads
-window.onload = loadNav;
+// Use one single onload event to trigger the process
+window.onload = loadComponents;
