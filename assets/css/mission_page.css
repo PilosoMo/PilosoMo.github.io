@@ -1,0 +1,114 @@
+/* --- Mission Page Layout --- */
+.mission-page {
+    padding-bottom: 5rem;
+}
+
+.mission-hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--hero-bg);
+    padding: 0 10%;
+}
+
+.mission-hero h1 {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.mission-content {
+    padding: 6rem 10%;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.text-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+/* --- Market Section --- */
+.market-section {
+    background: var(--nav-bg);
+    padding: 6rem 10%;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.market-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.market-card {
+    padding: 2.5rem;
+    background: var(--bg-color);
+    border-radius: 12px;
+    border-bottom: 4px solid var(--primary);
+    box-shadow: var(--card-shadow);
+}
+
+.market-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+/* --- Solution Highlight --- */
+.solution-highlight {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.solution-highlight h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.solution-highlight p {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .mission-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

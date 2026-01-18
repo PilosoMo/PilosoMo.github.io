@@ -8,5 +8,7 @@
 
 /* 3. Page-specific styles */
 @import url('home_page.css');
+@import url('product_page.css');
+@import url('mission_page.css');
 @import url('team_page.css');
 @import url('contact_page.css');
