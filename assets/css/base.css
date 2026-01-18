@@ -18,6 +18,11 @@
     --border-color: #eeeeee;
     --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
     --transition: all 0.3s ease;
+
+    /* Footer */
+    --footer-bg: #f8f9fa;
+    --footer-primary: #1f366c;
+    --footer-secondary: #ffffff;
 }
 
 /* Dark Theme Overrides */
@@ -30,6 +35,11 @@
     --hero-bg: radial-gradient(circle at top right, #1e293b, #0f172a);
     --border-color: #334155;
     --card-shadow: 0 4px 20px rgba(0,0,0,0.3);
+
+    /* Footer */
+    --footer-bg: #1e293b;
+    --footer-primary: #ffffff;
+    --footer-secondary: #ffffff;
 }
 
 /* BASIC RESET */

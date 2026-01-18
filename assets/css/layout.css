@@ -102,8 +102,8 @@ body {
 
 /* --- Global Footer Styles --- */
 .site-footer {
-    background: var(--nav-bg);
-    color: var(--primary);
+    background: var(--footer-bg);
+    color: var(--footer-primary);
     padding: 4rem 10% 2rem 10%;
     border-top: 1px solid var(--border-color);
     margin-top: 5rem;
@@ -125,7 +125,7 @@ body {
 
 .footer-links h4, 
 .footer-contact h4 {
-    color: var(--primary);
+    color: var(--footer-primary);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -142,13 +142,13 @@ body {
 
 .footer-links a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--footer-primary);
     transition: var(--transition);
     opacity: 0.8;
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    color: var(--footer-primary);
     opacity: 1;
 }
 
@@ -167,13 +167,13 @@ body {
 }
 
 .social-icons a {
-    color: var(--primary);
+    color: var(--footer-primary);
     font-size: 1.4rem;
     transition: var(--transition);
 }
 
 .social-icons a:hover {
-    color: var(--primary);
+    color: var(--footer-primary);
     transform: translateY(-3px);
 }
 
