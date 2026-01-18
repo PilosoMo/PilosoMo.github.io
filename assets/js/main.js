@@ -66,3 +66,26 @@ window.addEventListener('scroll', () => {
     // Update the last scroll position
     lastScrollY = window.scrollY;
 });
+
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+}
+
+// Call the function when the page loads
+window.onload = loadFooter;
+
+
+function loadNav() {
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+}
+
+// Call the function when the page loads
+window.onload = loadNav;
