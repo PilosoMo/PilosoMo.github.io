@@ -34,7 +34,7 @@
     perspective: 1000px;
     height: auto; 
     /* Capping the card width ensures the image doesn't blow up on wide screens */
-    max-width: 350px; 
+    max-width: 3500px; 
     width: 100%;
     margin: 0 auto; /* Centers the card within its grid cell */
     border: none;
@@ -83,17 +83,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    text-align: center;
+    padding: 1.5rem;;
 }
 
 .card-back h3 {
-    color: var(--primary);
-    margin-bottom: 1rem;
+    font-size: 1.25rem; /* larger than normal text */
+    font-weight: 600;   /* semi-bold */
+    margin-bottom: 0.50rem;
 }
 
 .card-back p {
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     font-size: 1rem;
     line-height: 1.4;
 }
