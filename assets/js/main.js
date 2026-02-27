@@ -59,7 +59,79 @@ function loadComponents() {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
         .catch(err => console.error("Error loading footer:", err));
+
+    // 3. Initialize Scroll Animations
+    initScrollAnimations();
+    initCounters();
+}
+
+// --- Scroll Animations Logic ---
+function initScrollAnimations() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.20, // Triggers when 15% of the element is visible
+        rootMargin: "0px 0px -50px 0px" // Triggers slightly before the element fully hits the bottom
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+}
+
+function initCounters() {
+    const counters = document.querySelectorAll('.counter-value');
+    
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const prefix = counter.getAttribute('data-prefix') || '';
+                const suffix = counter.getAttribute('data-suffix') || '';
+                
+                // Animation settings
+                const duration = 1500; // 1.5 seconds total
+                const stepTime = 30; // Update every 30ms for 60fps smoothness
+                const steps = duration / stepTime;
+                const increment = target / steps;
+                
+                let current = 0;
+                
+                const updateCounter = setInterval(() => {
+                    current += increment;
+                    
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(updateCounter);
+                    }
+                    
+                    // Update DOM with prefix, rounded number, and suffix
+                    counter.innerText = prefix + Math.ceil(current) + suffix;
+                }, stepTime);
+                
+                // Stop observing once the animation triggers so it doesn't repeat on scrolling up
+                obs.unobserve(counter);
+            }
+        });
+    }, { 
+        threshold: 0.5 // Wait until the number is 50% visible on screen before starting
+    });
+    
+    counters.forEach(counter => {
+        // Set initial state to 0 on page load
+        const prefix = counter.getAttribute('data-prefix') || '';
+        const suffix = counter.getAttribute('data-suffix') || '';
+        counter.innerText = prefix + '0' + suffix;
+        
+        observer.observe(counter);
+    });
 }
 
 // Use one single onload event to trigger the process
-window.onload = loadComponents;
+// Initialize everything when the DOM is fully loaded
+window.addEventListener('DOMContentLoaded', loadComponents);

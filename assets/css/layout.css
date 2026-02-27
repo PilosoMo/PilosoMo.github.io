@@ -37,6 +37,22 @@ nav ul a:hover {
     color: var(--primary);
 }
 
+/* Call to Action Button in Nav */
+nav ul a.nav-cta {
+    background-color: var(--primary);
+    color: var(--bg-color); /* Contrasting text color */
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul a.nav-cta:hover {
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
+}
+
 nav.nav-hidden {
     top: -150px; /* Adjust based on your nav height to fully hide it */
 }

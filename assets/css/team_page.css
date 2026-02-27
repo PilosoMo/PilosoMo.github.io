@@ -5,10 +5,51 @@
 
 /* --- Team Page Layout --- */
 .team-page {
-    padding: 6rem 10%;
+    /* Increased bottom padding from 6rem to 10rem to replace the footer margin */
+    padding: 6rem 10% 10rem 10%; 
     text-align: center;
-    /* Subtle premium gradient background */
-    background: linear-gradient(180deg, var(--bg-color) 0%, var(--hero-bg) 100%);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-color); 
+}
+
+/* --- Animated Panning Dot Matrix Background --- */
+.team-page::before {
+    content: "";
+    position: absolute;
+    /* Add a buffer to the edges so the animation doesn't clip */
+    top: -50px;
+    left: -50px;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    /* A clean, perfectly spaced grid of tiny dots */
+    background-image: radial-gradient(var(--primary) 1.5px, transparent 1.5px);
+    background-size: 35px 35px; /* Spacing between the dots */
+    opacity: 0.1; /* Very subtle so it doesn't distract from the content */
+    z-index: 0;
+    pointer-events: none;
+    /* Seamless linear animation moving exactly one grid unit (35px) */
+    animation: panMatrix 15s linear infinite;
+}
+
+@keyframes panMatrix {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-35px, -35px);
+    }
+}
+
+/* Make the dot matrix slightly more visible in dark mode */
+.dark-theme .team-page::before {
+    opacity: 0.15; 
+}
+
+/* Elevate content above the background glows */
+.page-header, .team-grid {
+    position: relative;
+    z-index: 2;
 }
 
 .page-header {
@@ -163,4 +204,10 @@
 .dark-theme .member-title {
     color: #ffffff;
     opacity: 0.7;
+}
+
+/* --- Layout Fix: Remove gap above footer --- */
+/* This allows the topographic background to touch the footer seamlessly */
+.team-page + #footer-placeholder .site-footer {
+    margin-top: 0;
 }
