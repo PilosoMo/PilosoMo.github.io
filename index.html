@@ -14,14 +14,19 @@
 <body>
     <div id="nav-placeholder"></div>
 
-    <header class="hero">
-        <div class="hero-content">
+    <header class="hero video-container">
+        <!-- Background Video -->
+        <video class="bg-video" autoplay loop muted playsinline poster="assets/videos/home-poster.jpg">
+            <source src="assets/videos/home-bg.mp4" type="video/mp4">
+        </video>
+        <!-- Dark Overlay for text readability -->
+        <div class="video-overlay"></div>
+        
+        <div class="hero-content hero-content-wrapper">
             <h1>Intelligent Fire Protection.</h1>
             <p>Autonomous systems that detect and suppress fires with precision and speed.</p>
-            <button class="btn-primary" id="cta-button">View Product</button>
+            <button class="btn-primary" id="cta-button" onclick="window.location.href='product.html'">View Product</button>
         </div>
-        <div class="hero-image">
-            </div>
     </header>
 
     <section class="features">
@@ -40,7 +45,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="contact-container"></div>
+        <div class="contact-container">
             <div class="contact-info">
                 <h2>Get in Touch</h2>
                 <p>Any questions? Let us know!</p>

@@ -11,8 +11,15 @@
     <div id="nav-placeholder"></div>
 
     <main class="product-page">
-        <header class="product-hero">
-            <div class="hero-text">
+        <header class="product-hero video-container">
+            <!-- Background Video -->
+            <video class="bg-video" autoplay loop muted playsinline poster="assets/videos/product-poster.jpg">
+                <source src="assets/videos/product-bg.mp4" type="video/mp4">
+            </video>
+            <!-- Dark Overlay -->
+            <div class="video-overlay"></div>
+
+            <div class="hero-text hero-content-wrapper">
                 <span class="badge">Now in Beta</span>
                 <h1>FireShield v1.0</h1>
                 <p>The first autonomous robotic responder designed for localized fire suppression in high-stakes environments.</p>
@@ -21,9 +28,9 @@
                     <button class="btn-secondary" onclick="window.location.href='index.html#contact'">Request Demo</button>
                 </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero-visual hero-content-wrapper">
                 <div class="product-placeholder">
-                    <i class="fas fa-robot"></i>
+                    <i class="fas fa-robot" style="color: white; font-size: 5rem;"></i>
                 </div>
             </div>
         </header>

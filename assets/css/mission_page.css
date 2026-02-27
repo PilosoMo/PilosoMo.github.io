@@ -16,8 +16,8 @@
 
 .mission-hero h1 {
     font-size: 4rem;
-    color: var(--primary);
     margin-bottom: 1.5rem;
+    /* Color rule removed to inherit the bright white from the video overlay wrapper */
 }
 
 .mission-content {
