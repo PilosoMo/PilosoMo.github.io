@@ -49,6 +49,7 @@ function loadComponents() {
             document.getElementById('nav-placeholder').innerHTML = data;
             // IMPORTANT: Initialize theme toggle ONLY after nav is in the DOM
             initThemeToggle();
+            initMobileMenu(); // Setup hamburger menu
         })
         .catch(err => console.error("Error loading navigation:", err));
 
@@ -63,6 +64,28 @@ function loadComponents() {
     // 3. Initialize Scroll Animations
     initScrollAnimations();
     initCounters();
+}
+
+// --- Mobile Menu Logic ---
+function initMobileMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Toggle icon between bars and close (X)
+            const icon = menuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
 }
 
 // --- Scroll Animations Logic ---

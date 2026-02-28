@@ -75,9 +75,47 @@
     nav { padding: 1rem 5%; }
     .hero { text-align: center; justify-content: center; }
     .hero h1 { font-size: 2.5rem; }
-    nav ul { display: none; } /* Add a mobile menu later */
 }
 
-html {
+html, body {
+    overflow-x: hidden; /* Global safeguard against horizontal scrolling */
     scroll-behavior: smooth;
+}
+
+/* --- Shared Animated Panning Dot Matrix Background --- */
+.dot-matrix-bg {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.dot-matrix-bg::before {
+    content: "";
+    position: absolute;
+    /* Add a buffer to the edges so the animation doesn't clip */
+    top: -50px;
+    left: -50px;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    background-image: radial-gradient(var(--primary) 1.5px, transparent 1.5px);
+    background-size: 35px 35px;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+    animation: panMatrix 15s linear infinite;
+}
+
+@keyframes panMatrix {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-35px, -35px); }
+}
+
+.dark-theme .dot-matrix-bg::before {
+    opacity: 0.15; 
+}
+
+/* Elevate direct children above the background */
+.dot-matrix-bg > * {
+    position: relative;
+    z-index: 2;
 }

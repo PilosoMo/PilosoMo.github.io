@@ -3,44 +3,6 @@
     Styles specific to the contact page layout and components.
 */
 
-/* --- Animated Panning Dot Matrix Background --- */
-.contact-page {
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-page::before {
-    content: "";
-    position: absolute;
-    /* Add a buffer to the edges so the animation doesn't clip */
-    top: -50px;
-    left: -50px;
-    width: calc(100% + 100px);
-    height: calc(100% + 100px);
-    /* A clean, perfectly spaced grid of tiny dots */
-    background-image: radial-gradient(var(--primary) 1.5px, transparent 1.5px);
-    background-size: 35px 35px; /* Spacing between the dots */
-    opacity: 0.1; /* Very subtle so it doesn't distract from the content */
-    z-index: 0;
-    pointer-events: none;
-    /* Seamless linear animation moving exactly one grid unit (35px) */
-    animation: panMatrix 15s linear infinite;
-}
-
-@keyframes panMatrix {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-35px, -35px);
-    }
-}
-
-/* Make the dot matrix slightly more visible in dark mode */
-.dark-theme .contact-page::before {
-    opacity: 0.15; 
-}
-
 /* Elevate content above the background glows */
 .page-header, .contact-container {
     position: relative;
