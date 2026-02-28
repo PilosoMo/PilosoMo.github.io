@@ -25,24 +25,68 @@
         <div class="hero-content hero-content-wrapper">
             <h1>Intelligent fire suppression.</h1>
             <p>Deploying edge-AI and autonomous robotics to detect and suppress fires before the alarm even sounds.</p>
-            <button class="btn-primary" id="cta-button" onclick="window.location.href='product.html'">View Product</button>
+            
+            <!-- Dual CTAs -->
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="window.location.href='product.html'">View Product</button>
+                <button class="btn-primary" onclick="window.location.href='mission.html'">Our Mission</button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#explore" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
         </div>
     </header>
 
-    <section class="features">
-        <div class="card">
-            <h3>Early Threat Detection</h3>
-            <p>AI-powered sensing detects fires before reaching critical thresholds.</p>
-        </div>
-        <div class="card">
-            <h3>Autonomous Control</h3>
-            <p>Fully automated operation adapts dynamically to fire behavior without human intervention.</p>
-        </div>
-        <div class="card">
-            <h3>Precision Suppression</h3>
-            <p>Targeted suppression minimizing unnecessary damage.</p>
-        </div>
-    </section>
+    <main class="dot-matrix-bg">
+        <!-- New Expanding Panels Gateway Section -->
+        <section id="explore" class="gateway-section">
+            <div class="gateway-container">
+                
+                <!-- Panel 1: Mission -->
+                <div class="panel mission-panel" onclick="window.location.href='mission.html'">
+                    <div class="panel-bg"style="background-image: url('assets/images/logoimage.jpg');"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h2>The Mission</h2>
+                        <div class="panel-reveal">
+                            <p>Why we build. Discover the critical need for immediate, autonomous fire suppression to save lives and billions in property damage.</p>
+                            <span class="panel-btn">Read the Mission <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Product -->
+                <div class="panel product-panel" onclick="window.location.href='product.html'">
+                    <!-- Uses the poster image as a background -->
+                    <div class="panel-bg" style="background-image: url('assets/images/model.jpg');"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon"><i class="fas fa-microchip"></i></div>
+                        <h2>FireShield v1.0</h2>
+                        <div class="panel-reveal">
+                            <p>Meet the paradigm shift in fire safety. Sub-second latency powered by embedded edge-AI and precision hardware.</p>
+                            <span class="panel-btn">See the Tech <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Team -->
+                <div class="panel team-panel" onclick="window.location.href='team.html'">
+                    <div class="panel-bg"style="background-image: url('assets/images/group.jpg');"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon"><i class="fas fa-users"></i></div>
+                        <h2>The Team</h2>
+                        <div class="panel-reveal">
+                            <p>Built by engineers from Apple, SpaceX, and more. Meet the minds behind Odryss.</p>
+                            <span class="panel-btn">Meet the Team <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
 

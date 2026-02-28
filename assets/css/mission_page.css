@@ -50,18 +50,25 @@
 }
 
 .stat-card {
-    background: var(--card-bg);
+    background: var(--primary); /* Navy Blue Background */
+    color: #ffffff; /* White text overall */
     border: 1px solid var(--border-color);
     padding: 3rem;
     border-radius: 20px;
     text-align: center;
     box-shadow: var(--card-shadow);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px); /* Raises the card */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #ffffff; /* Explicitly white to override any other rules */
 }
 
 /* --- Scroll Animation Classes --- */
