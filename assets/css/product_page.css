@@ -167,11 +167,13 @@
     100% { transform: translate(8px, -8px); opacity: 0; }
 }
 
-/* --- Product Details --- */
+/* --- Product Details (Comparison & Specs Side-by-Side) --- */
 .product-details-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     padding: 2rem 10% 6rem 10%; /* Reduced top padding to pull it closer to effectiveness section */
+    align-items: stretch;
     position: relative;
     z-index: 2; /* Elevates above dot matrix */
 }
@@ -197,7 +199,6 @@
     color: var(--primary);
     margin-bottom: 2rem;
     font-weight: 800;
-    text-align: center; /* <-- ADD THIS LINE */
 }
 
 /* --- Comparison Table specific --- */
@@ -206,8 +207,6 @@
     overflow-x: auto;
     margin-top: auto;
     margin-bottom: auto;
-    display: flex;
-    justify-content: center;
 }
 
 table {
